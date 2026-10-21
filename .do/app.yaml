@@ -3,7 +3,8 @@ region: ams
 domains:
   - domain: blossomact.com
     type: PRIMARY
-    wildcard: true
+  - domain: www.blossomact.com
+    type: ALIAS
 alerts:
   - rule: DEPLOYMENT_FAILED
   - rule: DOMAIN_FAILED
