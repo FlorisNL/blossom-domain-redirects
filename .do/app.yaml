@@ -1,0 +1,19 @@
+name: blossomact-redirect
+region: ams
+static_sites:
+  - name: blossomact
+    git:
+      repo_clone_url: https://github.com/FlorisNL/blossom-domain-redirects.git
+      branch: main
+    source_dir: blossomact
+    output_dir: .
+ingress:
+  rules:
+    - match:
+        path:
+          prefix: /
+      redirect:
+        uri: /
+        authority: www.moreblossom.com
+        scheme: https
+        redirect_code: 301
